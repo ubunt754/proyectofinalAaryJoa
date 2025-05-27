@@ -1,10 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=WDXL+Lubrifont+TC&display=swap');
 #nomem{
 flex-wrap: wrap;
-font-family: Georgia, 'Times New Roman', Times, serif;
-margin-left: 180px;
+font-family:    'Bebas Neue', cursive;
+margin-left: 10px;
 
 }
 #menudenav{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     text-align: left;
     display: flex;
     flex-wrap: wrap;
