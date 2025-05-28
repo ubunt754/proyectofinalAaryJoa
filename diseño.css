@@ -1,91 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=WDXL+Lubrifont+TC&display=swap');
 
 #nomem {
-    flex-wrap: wrap;
-    font-family: 'Bebas Neue', cursive;
-    margin-left: 10px;
-    text-align: center;
+  flex-wrap: wrap;
+  font-family: 'Bebas Neue', cursive;
+  margin-left: 10px;
+  text-align: center;
 
 }
 
 body {
-    background-image: url('assets/Gemini_Generated_Image_8msdce8msdce8msd.png');
-    /* Cambia esto por la ruta correcta */
-    background-size: cover;
-    /* Ajusta la imagen para cubrir toda la pantalla */
-    background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que se repita */
-    height: 100vh;
-    /* Asegura que ocupe toda la altura */
-    margin: 0;
-    /* Elimina márgenes del navegador */
+  background-image: url('assets/Gemini_Generated_Image_8msdce8msdce8msd.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
 }
 
 #nav {
-    background-color: #1f2833;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    color: #66fcf1;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  background-color: #1f2833;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: #66fcf1;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-    .barra-busqueda {
-      display: flex;
-      align-items: center;
-      border: 2px solid #66fcf1;
-      border-radius: 8px;
-      padding: 8px 12px;
-      width: 400px;
-      background-color: transparent;
-      height: 30px;
-      align-content: center;
-    }
+.contenedor-busqueda {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+}
 
-    .barra-busqueda input {
-      background: none;
-      border: none;
-      outline: none;
-      color: #66fcf1;
-      font-size: 16px;
-      flex: 1;
-    }
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  border: 2px solid #66fcf1;
+  border-radius: 8px;
+  padding: 0 16px;
+  height: 48px;
+  width: 400px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
 
-    .barra-busqueda i {
-      color: #66fcf1;
-      font-size: 18px;
-      margin-left: 8px;
-    }
+.barra-busqueda input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #66fcf1;
+  font-size: 16px;
+  flex: 1;
+}
 
-    @media (max-width: 400px) {
-      .barra-busqueda {
-        width: 90%;
-      }
-    }
+.barra-busqueda i {
+  color: #66fcf1;
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+/* Versión solo lupa para pantallas pequeñas */
+@media (max-width: 500px) {
+  .barra-busqueda input {
+    display: none;
+  }
+
+  .barra-busqueda {
+    width: auto;
+    padding: 0 12px;
+    justify-content: center;
+  }
+}
 
 .botones {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.boton-con-tooltip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
 .btn-icono {
-    background: none;
-    border: none;
-    color: #66fcf1;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s, transform 0.2s;
+  background: none;
+  border: none;
+  color: #66fcf1;
+  font-size: 28px;
+  padding: 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn-icono:hover {
-    background-color: rgba(102, 252, 241, 0.1);
-    transform: scale(1.1);
+  background-color: rgba(102, 252, 241, 0.1);
+  transform: scale(1.1);
 }
 
-#options {
-    display: flex;
-    justify-content: center;
+.tooltip {
+  position: absolute;
+  top: 100%;
+  background: none;
+  color: #66fcf1;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.boton-con-tooltip:hover .tooltip {
+  opacity: 1;
 }

@@ -12,19 +12,28 @@
 <body>
     <header id="nav">
         <div id="logo">
-            <h1 id="nomem">se insertara foto del logo</h1>
+            <h1 id="nomem"></h1>
         </div>
-        <div class="barra-busqueda">
-            <input type="text" placeholder="¿Necesitas ayuda?" />
-            <i class="fas fa-search"></i>
-        </div>
-        <div id="options">
-            <button class="btn-icono" aria-label="Carrito">
-                <i class="fas fa-shopping-cart"></i>
-            </button>
-            <button class="btn-icono" aria-label="Cuenta">
-                <i class="fas fa-user"></i>
-            </button>
+         <div class="contenedor-busqueda">
+    <div class="barra-busqueda">
+      <input type="text" placeholder="¿Necesitas ayuda?" />
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+        <div class="botones">
+            <div class="boton-con-tooltip">
+                <button class="btn-icono" aria-label="Cuenta">
+                    <i class="fas fa-user"></i>
+                </button>
+                <span class="tooltip">Cuenta</span>
+            </div>
+
+            <div class="boton-con-tooltip">
+                <button class="btn-icono" aria-label="Carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+                <span class="tooltip">Carrito</span>
+            </div>
         </div>
     </header>
     <div id="dropdow-menu"></div>
