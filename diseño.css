@@ -9,12 +9,11 @@
 }
 
 body {
-  background-image: url(assets/840843081452.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
+      margin: 0;
+      background-color: #1f2833;
+      color: white;
+      display: flex;
+      height: 100vh;
 }
 
 #nav {
